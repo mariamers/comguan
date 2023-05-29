@@ -1,6 +1,6 @@
 
 @import url('https://fonts.googleapis.com/css2?family=Assistant:wght@400;700&display=swap');
-
+@import url('https://fonts.googleapis.com/css2?family=Shadows+Into+Light&display=swap');
 :root {
 	--cor0: #000000;
 	--cor1: #ED1C24;
@@ -14,16 +14,19 @@
 	box-sizing: border-box;
 	text-decoration: none;
 	list-style: none;
+
 }
 html{
 	font-family: 'Assistant';
 	overflow-y: scroll;
 	scroll-behavior: smooth;
 	transition: 0.1s ease-in-out;
+	min-width: 260px;
+	background-color: var(--cor1);
+
 }
 
 #wrapper {
-    background-color: var(--cor1);
     display: grid;
     grid-template-areas:
         "header header header"
@@ -37,12 +40,13 @@ html{
 
 .h1, h1 {
 	color: var(--cor1);
-	font-size: 2rem;
+	font-size: 2.5rem;
 	text-align: center;
 	background-color: var(--cor2);
 	padding: 0.5rem;
 	font-weight: 400;
 	width: 100%;
+	font-family: 'Shadows Into Light';
 }
 
 /*header*/
@@ -148,6 +152,12 @@ html{
 	height: auto;
 }
 
+section {
+	min-height: 50vh;
+	width: 100%;
+	background-color: var(--cor1);
+}
+
 #discografia {
 	padding-top: 2rem;
 	scroll-behavior: smooth;
@@ -224,12 +234,19 @@ html{
 	padding: 0.4rem;
 
 }
+
 .social {
-	display: flex;
-	flex-direction: column;
 	padding: 5rem 2rem 5rem 3rem;
-	gap: 2rem;
+
+}
+.social li {
+	display: flex;
+	flex-direction: row;
 	color: var(--cor1);
+	align-items: baseline;
+	padding-bottom: 1rem;
+	padding-left: 3rem;
+	flex-wrap: nowrap;
 
 }
 
@@ -269,9 +286,7 @@ img {
 		display: block;
 		padding: 0;
 	}
-	.active {
-		display: none;
-	}
+
 	.topnav a:hover {
 		color: var(--cor0);
 		background: none;
@@ -279,6 +294,7 @@ img {
 	.topnav a:not(:first-child) {
 		display: none;
 	}
+
 	.topnav a.icon {
 	  float: right;
 	  display: block;
@@ -301,6 +317,8 @@ img {
 	  float: none;
 	  display: block;
 	  text-align: left;
+	  scale: 1;
+
 	}
   
 	#wrapper {
@@ -330,6 +348,10 @@ img {
 
 	.h1 {
 		background-color: none;
+	}
+
+	.social li {
+		padding: 0;
 	}
 
   }
